@@ -28,8 +28,8 @@ export const Input = styled.input`
   width: 320px;
 
   &::placeholder {
-    font-size: .8em;
-    padding-left: .7em;
+    font-size: 0.9em;
+    padding-left: 0.7em;
   }
 `;
 
@@ -45,15 +45,14 @@ export const Button = styled.button`
   width: 80px;
 `;
 
-export const ListItem = styled.div `
-  background: #E4E4E4;
-  box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
+export const ListItem = styled.div`
+  background: ${(props) => (props.finished ? "pink" : "#E4E4E4")};
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .5em;
+  padding: 0.5em;
   margin-bottom: 30px;
-`
-
+`;

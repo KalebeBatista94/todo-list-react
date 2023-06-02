@@ -14,7 +14,7 @@ function App() {
   }
 
   function clickedButton() {
-    setList([...list, { id: uuid(), task }]);
+    setList([...list, { id: uuid(), task, finished: false }]);
   }
 
   return (
@@ -22,16 +22,15 @@ function App() {
       <ContainerItens>
         <Input
           onChange={changedInput}
-          placeholder="O que tenho para fazer..."
-        ></Input>
+          placeholder="O que tenho para fazer..."> 
+        </Input>
         <Button onClick={clickedButton}>Adicionar</Button>
 
         <ul>
           {list.map((item) => (
-            // eslint-disable-next-line react/jsx-key
-            <ListItem>
+            <ListItem isFinished={item.finished} key={item.id}>
               <FcCheckmark />
-              <li key={item.id}>{item.task}</li>
+              <li>{item.task}</li>
               <FcEmptyTrash />
             </ListItem>
           ))}
