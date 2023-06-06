@@ -46,7 +46,7 @@ export const Button = styled.button`
 `;
 
 export const ListItem = styled.div`
-  background: ${(props) => (props.finished ? "pink" : "#E4E4E4")};
+  background: ${ props => props.isFinished ? '#FEFE97' : 'E4E4E4'};
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   height: 60px;
@@ -55,4 +55,26 @@ export const ListItem = styled.div`
   justify-content: space-between;
   padding: 0.5em;
   margin-bottom: 30px;
+
+  .finishButton {
+    transition: 0.5s;
+    font-size: 1.5em;
+  }
+
+  .trashCan {
+    transition: 0.5s;
+    font-size: 1.5em;
+  }
+
+  .finishButton:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .trashCan:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+    cursor: pointer;
+  }
 `;

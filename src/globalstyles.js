@@ -9,12 +9,4 @@ export default createGlobalStyle`
         list-style: none;
         font-family: 'Roboto', sans-serif;
     }   
-
-    /* body {
-        background: linear-gradient(90deg, #383838 0%, #000000 81.25%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    } */
 `
