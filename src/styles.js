@@ -43,6 +43,7 @@ export const Button = styled.button`
   font-weight: 700;
   height: 30px;
   width: 80px;
+  cursor: pointer;
 `;
 
 export const ListItem = styled.div`

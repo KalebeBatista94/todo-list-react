@@ -26,11 +26,10 @@ function App() {
   }
 
   function deleteItem(id) {
-    const newList = list.filter(item => item.id !== id)
+    const newList = list.filter((item) => item.id !== id);
 
-    setList(newList)
+    setList(newList);
   }
-
 
   return (
     <Container>
@@ -49,7 +48,10 @@ function App() {
                 onClick={() => finishButton(item.id)}
               />
               <li>{item.task}</li>
-              <FcEmptyTrash className="trashCan" onClick={() => deleteItem(item.id)} />
+              <FcEmptyTrash
+                className="trashCan"
+                onClick={() => deleteItem(item.id)}
+              />
             </ListItem>
           ))}
         </ul>
